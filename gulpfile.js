@@ -1,20 +1,15 @@
 import gulp from 'gulp';
 const { src, dest, watch } = gulp;
-
 import sass from 'gulp-dart-sass';
 import autoprefixer from 'gulp-autoprefixer';
 import sourcemaps from 'gulp-sourcemaps';
-
 import fileinclude from 'gulp-file-include';
 import htmlmin from 'gulp-htmlmin';
-
 import libsquoosh from 'gulp-libsquoosh';
 import svgstore from 'gulp-svgstore';
-
 import webpack from 'webpack';
 import webpackStream from 'webpack-stream';
 import webpackConfig from './webpack.config.js';
-
 import rename from 'gulp-rename';
 import del from 'del';
 import browser from 'browser-sync';
@@ -100,7 +95,7 @@ const sprite = () => {
 const copy = () => {
     return src(['src/fonts/*.{woff2,woff}',
         'src/favicon.ico',
-        'src/webmanifest.manifest',
+        'src/manifest.webmanifest',
         'src/data/**/*.json'
     ], {
         base: 'src',
