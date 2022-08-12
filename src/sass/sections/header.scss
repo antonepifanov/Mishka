@@ -1,8 +1,24 @@
 .header {
+  background-color: $color-default-white;
+  left: 0;
+  top: 0;
   display: flex;
   flex-direction: column;
   border-bottom: 1px solid $gray1;
   padding: 0;
+  z-index: 10;
+
+  &--no-js {
+    position: static;
+  }
+
+  &--opened {
+    position: absolute;
+
+    @include media(md) {
+      position: static;
+    }
+  }
 }
 
 .header__logo {
@@ -10,10 +26,6 @@
   place-items: center;
   padding-top: 22px;
   padding-bottom: 22px;
-
-}
-
-.header__nav {
 }
 
 .header__nav-list {
@@ -122,12 +134,16 @@
 }
 
 .header__cart {
+  border-top: 1px solid $gray1;
+}
+
+.header__cart-button {
   @include btnres;
+  width: 100%;
   display: flex;
   align-items: center;
   gap: 26px;
   padding: 27px 30px;
-  border-top: 1px solid $gray1;
   font-size: 17px;
   font-weight: 700;
   line-height: 1.4;
@@ -155,8 +171,8 @@
     }
   }
 
-  &:focus-visible {
-    outline: none;
+  &:focus-visible,
+  &:focus {
     svg {
       color: $green1;
       opacity: 1;
@@ -175,5 +191,69 @@
 }
 
 .header__note {
+  display: none;
+}
+
+.header__button {
+  @include btnres;
+  position: absolute;
+  top: 32px;
+  right: 31px;
+  width: 20px;
+  height: 14px;
+  transition: $default-transition-settings;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:focus-visible,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  @include media(md) {
+    display: none;
+  };
+}
+
+.header--closed .header__button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 20px;
+  height: 2px;
+  background-color: $color-default-black;
+  box-shadow: 0 6px 0 0 $color-default-black, 0 12px 0 0 $color-default-black;
+}
+
+.header--opened .header__button {
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 20px;
+    height: 2px;
+    background-color: $color-default-black;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+    box-shadow: none;
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+}
+
+.header--no-js .header__button {
   display: none;
 }
