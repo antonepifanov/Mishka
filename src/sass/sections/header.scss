@@ -1,0 +1,179 @@
+.header {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid $gray1;
+  padding: 0;
+}
+
+.header__logo {
+  display: grid;
+  place-items: center;
+  padding-top: 22px;
+  padding-bottom: 22px;
+
+}
+
+.header__nav {
+}
+
+.header__nav-list {
+  @include listres;
+}
+
+.header__nav-item {
+  padding-top: 27px;
+  padding-bottom: 27px;
+  padding-left: 76px;
+  border-top: 1px solid $gray1;
+
+  a {
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 1.4;
+    color: $color-default-black;
+    transition: $default-transition-settings;
+
+    &:hover {
+      text-decoration: none;
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
+
+    &:focus-visible {
+      outline: 0;
+      opacity: 0.6;
+    }
+  }
+}
+
+.header__nav-item--desktop {
+  display: none;
+}
+
+.header__search {
+  position: relative;
+  padding: 27px 30px;
+  border-top: 1px solid $gray1;
+}
+
+.header__search-input {
+  border: none;
+  font-size: 17px;
+  line-height: 1;
+  padding: 0 46px;
+  width: 100%;
+
+  &:focus-visible {
+    outline: none;
+
+    & + label {
+      display: none;
+    }
+  }
+
+  &:not(:focus-visible) {
+    font-size: 0;
+  }
+}
+
+.header__search-label {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 1.4;
+  color: $color-default-black;
+  display: flex;
+  align-items: center;
+  gap: 26px;
+  margin-bottom: 0;
+
+  &:hover {
+    svg {
+      color: $green1;
+      opacity: 1;
+    }
+
+    span {
+      opacity: 0.6;
+      transition: $default-transition-settings;
+    }
+  }
+
+  &:active {
+    svg {
+      opacity: 0.3;
+    }
+
+    span {
+      opacity: 0.3;
+    }
+  }
+
+  svg {
+    opacity: 0.2;
+    transition: $default-transition-settings;
+  }
+}
+
+.header__cart {
+  @include btnres;
+  display: flex;
+  align-items: center;
+  gap: 26px;
+  padding: 27px 30px;
+  border-top: 1px solid $gray1;
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 1.4;
+  color: $color-default-black;
+
+  &:hover {
+    svg {
+      color: $green1;
+      opacity: 1;
+    }
+
+    & > span {
+      opacity: 0.6;
+      transition: $default-transition-settings;
+    }
+  }
+
+  &:active {
+    svg {
+      opacity: 0.3;
+    }
+
+    & > span {
+      opacity: 0.3;
+    }
+  }
+
+  &:focus-visible {
+    outline: none;
+    svg {
+      color: $green1;
+      opacity: 1;
+    }
+
+    & > span {
+      opacity: 0.6;
+      transition: $default-transition-settings;
+    }
+  }
+
+  svg {
+    opacity: 0.2;
+    transition: $default-transition-settings;
+  }
+}
+
+.header__note {
+  display: none;
+}

@@ -1,8 +1,11 @@
 // Global
-
 @import "global/mixins";
 @import "global/variables";
 @import "global/normalize";
 @import "global/reboot";
 @import "global/fonts";
 @import "global/typography";
+@import "global/utils";
+
+//Blocks
+@import "sections/header";
