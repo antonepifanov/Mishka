@@ -1,12 +1,15 @@
 .header {
+  padding: 0;
+  min-height: 80px;
+  position: relative;
+}
+
+.header__wrapper {
   background-color: $color-default-white;
-  left: 0;
-  top: 0;
+  z-index: 10;
   display: flex;
   flex-direction: column;
   border-bottom: 1px solid $gray1;
-  padding: 0;
-  z-index: 10;
 
   &--no-js {
     position: static;
@@ -14,6 +17,8 @@
 
   &--opened {
     position: absolute;
+    left: 0;
+    right: 0;
 
     @include media(md) {
       position: static;
@@ -221,7 +226,7 @@
   };
 }
 
-.header--closed .header__button::before {
+.header__wrapper--closed .header__button::before {
   content: "";
   position: absolute;
   top: 0;
@@ -232,7 +237,7 @@
   box-shadow: 0 6px 0 0 $color-default-black, 0 12px 0 0 $color-default-black;
 }
 
-.header--opened .header__button {
+.header__wrapper--opened .header__button {
   &::before,
   &::after {
     content: "";
@@ -246,7 +251,6 @@
 
   &::before {
     transform: rotate(45deg);
-    box-shadow: none;
   }
 
   &::after {
@@ -254,6 +258,6 @@
   }
 }
 
-.header--no-js .header__button {
+.header__wrapper--no-js .header__button {
   display: none;
 }
