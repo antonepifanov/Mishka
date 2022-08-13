@@ -21,18 +21,19 @@ const toggleMenu = () => {
   if (window.innerWidth < 772) {
     header.classList.add("header__wrapper--closed");
     hideMenu();
-    window.addEventListener('resize', () => {
-      if (window.innerWidth >= 772) {
-        openMenu();
-        header.classList.remove("header__wrapper--closed");
-        header.classList.remove("header__wrapper--opened");
-      } else {
-        hideMenu();
-        header.classList.add("header__wrapper--closed");
-        header.classList.remove("header__wrapper--opened");
-      }
-    });
   }
+
+  window.addEventListener('resize', () => {
+    if (window.innerWidth >= 772) {
+      openMenu();
+      header.classList.remove("header__wrapper--closed");
+      header.classList.remove("header__wrapper--opened");
+    } else {
+      header.classList.add("header__wrapper--closed");
+      header.classList.remove("header__wrapper--opened");
+      hideMenu();
+    }
+  });
 
   button.addEventListener("click", function() {
     if (header.classList.contains("header__wrapper--closed")) {
