@@ -170,16 +170,16 @@
       line-height: 1.4;
     }
 
-    &:hover {
+    &[href]:hover {
       text-decoration: none;
       opacity: 0.6;
     }
 
-    &:active {
+    &[href]:active {
       opacity: 0.3;
     }
 
-    &:focus-visible {
+    &[href]:focus-visible {
       outline: 0;
       opacity: 0.6;
     }

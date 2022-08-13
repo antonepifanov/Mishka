@@ -5,7 +5,9 @@
     <title>Страница формы</title>
   </head>
   <body>
-    @@include("html/sections/header.html")
+    @@include("html/sections/header.html", {
+      catalogPage: true
+    })
 
     <script src="js/bundle.min.js"></script>
   </body>

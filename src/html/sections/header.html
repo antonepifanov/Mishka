@@ -11,10 +11,10 @@
     <nav class="header__nav">
       <ul class="header__nav-list">
         <li class="header__nav-item">
-          <a href="catalog.html">Каталог товаров</a>
+          <a @@if (!context.catalogPage) {href="catalog.html"}>Каталог товаров</a>
         </li>
         <li class="header__nav-item">
-          <a href="form.html">Вязание на заказ</a>
+          <a @@if (!context.formPage) {href="form.html"}>Вязание на заказ</a>
         </li>
         <li class="header__nav-item header__nav-item--desktop">
           <a href="#">Новые поступления</a>
