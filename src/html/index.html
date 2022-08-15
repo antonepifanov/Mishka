@@ -6,45 +6,12 @@
   </head>
   <body>
     @@include("html/sections/header.html", {
-                main: true
+      main: true
     })
-    <footer class="footer">
-      <div class="footer__wrapper">
-        <a class="footer__logo" href="index.html">
-          <img src="img/logo-text-mobile.svg" width="128" height="24" alt="Логотип Cat Energy">
-        </a>
-        <ul class="footer__socials social">
-          <li class="social__item">
-            <a class="social__link" href="http://vk.com/cat_energy_ru" rel="noopener" target="_blank" aria-label="В контакте">
-              <svg class="social__icon social__icon--vk" width="23" height="13">
-                <use xlink:href="img/sprite.svg#icon-vk"></use>
-              </svg>
-            </a>
-          </li>
-          <li class="social__item">
-            <a class="social__link" href="http://instagram.com/cat_energy_ru" rel="noopener" target="_blank" aria-label="Инстаграм">
-              <svg class="social__icon social__icon--insta" width="16" height="16">
-                <use xlink:href="img/sprite.svg#icon-insta"></use>
-              </svg>
-            </a>
-          </li>
-          <li class="social__item">
-            <a class="social__link" href="http://facebook.com/cat_energy_ru" rel="noopener" target="_blank" aria-label="Фэйсбук">
-              <svg class="social__icon social__icon--fb" width="13" height="20">
-                <use xlink:href="img/sprite.svg#icon-fb"></use>
-              </svg>
-            </a>
-          </li>
-        </ul>
-        <a class="footer__link" href="https://htmlacademy.ru/intensive/adaptive" rel="noopener" target="_blank">
-          <span class="footer__link-text">HTML Academy</span>
-          <svg class="footer__link-logo" width="40" height="46">
-            <use xlink:href="img/sprite.svg#icon-htmlacademy"></use>
-          </svg>
-        </a>
-      </div>
-    </footer>
-    <script src="js/bundle.min.js"></script>
+
+    @@include("html/sections/footer.html", {
+      main: true
+    })
   </body>
 </html>
 
