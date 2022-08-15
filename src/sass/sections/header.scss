@@ -51,6 +51,14 @@
       position: static;
     }
   }
+
+  &--closed {
+    .header__nav,
+    .header__search,
+    .header__cart {
+      display: none;
+    }
+  }
 }
 
 .header__logo {
