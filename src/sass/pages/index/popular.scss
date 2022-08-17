@@ -3,26 +3,48 @@
   display: flex;
   flex-direction: column;
   padding-bottom: 36px;
+  margin-bottom: 37px;
+
+  @include media(md) {
+    padding-bottom: 52px;
+    margin-top: -6px;
+    margin-bottom: 66px;
+    display: grid;
+    grid-template-columns: 1fr 334px;
+    grid-template-rows: repeat(3, auto);
+    column-gap: 58px;
+    row-gap: 50px;
+  }
+
+  @include media(lg) {
+    padding-bottom: 73px;
+    margin-bottom: 91px;
+    grid-template-columns: min-content 292px 50%;
+    grid-template-rows: 20px repeat(3, auto);
+    row-gap: 20px;
+    justify-content: end;
+  }
 
   &::after {
     position: absolute;
     content: "";
     left: 0;
     right: 0;
-    bottom: 0;
+    bottom: -6px;
     width: 100%;
     height: 6px;
     background-image: url("../img/popular-line.svg");
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
 
     @include media(md) {
       height: 17px;
+      bottom: -17px;
     }
 
     @include media(lg) {
       left: 50px;
       height: 23px;
+      bottom: -23px;
       width: 1050px;
     }
   }
@@ -30,6 +52,19 @@
 
 .popular__title {
   margin-bottom: 4px;
+
+  @include media(md) {
+    margin-bottom: 0;
+    grid-column: 1 / -1;
+    grid-row: 1 / 2;
+  }
+
+  @include media(lg) {
+    grid-column: 2 / -1;
+    grid-row: 2 / 3;
+    z-index: 10;
+    align-self: center;
+  }
 }
 
 .popular__label {
@@ -42,6 +77,18 @@
 
   @include media(md) {
     line-height: 1;
+    width: 100px;
+    text-align: center;
+    margin-bottom: 0;
+    grid-column: 2 /3;
+    grid-row: 1 /2;
+    align-self: center;
+    justify-self: end;
+  }
+
+  @include media(lg) {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
   }
 }
 
@@ -50,6 +97,16 @@
   font-weight: 400;
   color: $black2;
   margin-bottom: 28px;
+
+  @include media(md) {
+    margin-bottom: 0;
+    align-self: start;
+  }
+
+  @include media(lg) {
+    grid-column: 2 / 3;
+    grid-row: 3 / 4;
+  }
 }
 
 .popular__description-lead {
@@ -91,11 +148,24 @@
 }
 
 .popular__image {
+  display: grid;
   margin-bottom: 26px;
+
+  @include media(md) {
+    margin-bottom: 0;
+    grid-column: 2 / 3;
+    grid-row: 2 / 4;
+  }
+
+  @include media(lg) {
+    grid-column: 3 / 4;
+    grid-row: 1 / -1;
+  }
 
   img {
     width: 100%;
-    height: auto;
+    height: 100%;
+    object-fit: cover;
   }
 }
 
@@ -106,6 +176,13 @@
 
   @include media(md) {
     gap: 33px;
+    grid-row: 3 / 4;
+    align-self: end;
+  }
+
+  @include media(lg) {
+    grid-column: 2 / 3;
+    grid-row: 4 / 5;
   }
 }
 

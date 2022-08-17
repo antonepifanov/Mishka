@@ -10,6 +10,18 @@
   text-transform: uppercase;
   color: $black2;
   text-align: center;
+  transition: $default-transition-settings;
+
+  &:hover,
+  &:focus-visible {
+    border: none;
+    background-color: $black2;
+    color: $color-default-white;
+  }
+
+  &:active {
+    color: rgba($color-default-white, 0.3);
+  }
 
   &--other {
     border: none;
