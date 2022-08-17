@@ -4,7 +4,7 @@
   background-image: url("../img/hero-mobile.png");
   background-repeat: no-repeat;
   background-size: 100% auto;
-  background-position: center -25px;
+  background-position: center -17px;
 
   @include retina {
     background-image: url("../img/hero-mobile@2x.png");
@@ -13,16 +13,17 @@
   @include media(md) {
     margin-bottom: 40px;
     background-image: url("../img/hero-tablet.png");
+    background-position: center top;
     top: -46px;
 
     &::after {
       position: absolute;
       content: "";
-      bottom: -15px;
-      height: 34px;
+      bottom: -10px;
+      height: 24px;
       left: 0;
       right: 0;
-      background-image: url("../img/zigzag.svg");
+      background-image: url("../img/zigzag-tablet.svg");
       background-repeat: no-repeat;
       background-size: cover;
     }
@@ -35,6 +36,12 @@
   @include media(lg) {
     margin-bottom: 54px;
     background-image: url("../img/hero-desktop.png");
+
+    &::after {
+      bottom: -17px;
+      height: 34px;
+      background-image: url("../img/zigzag.svg");
+    }
 
     @include retina {
       background-image: url("../img/hero-desktop@2x.png");

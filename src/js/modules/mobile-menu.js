@@ -2,15 +2,18 @@
   const TABLET_WIDTH = 772;
   const header = document.querySelector(".header__wrapper");
   const button = header.querySelector(".header__button");
+  let isMenuOpen = true;
 
   const openMenu = () => {
     header.classList.remove("header__wrapper--closed");
     header.classList.add("header__wrapper--opened");
+    isMenuOpen = !isMenuOpen;
   }
 
   const hideMenu = () => {
     header.classList.add("header__wrapper--closed");
     header.classList.remove("header__wrapper--opened");
+    isMenuOpen = !isMenuOpen;
   }
 
   header.classList.remove("header__wrapper--no-js");
@@ -20,18 +23,15 @@
   }
 
   window.addEventListener('resize', () => {
-    if (window.innerWidth >= TABLET_WIDTH) {
-      openMenu();
-    } else {
-      hideMenu();
-    }
+    window.innerWidth >= TABLET_WIDTH
+      ? openMenu()
+      : hideMenu()
   });
 
   button.addEventListener("click", function() {
-    if (header.classList.contains("header__wrapper--closed")) {
-      openMenu();
-    } else {
-      hideMenu();
+    isMenuOpen
+      ? hideMenu()
+      : openMenu()
     }
-  });
+  );
 })();
