@@ -43,6 +43,82 @@
           </ul>
         </div>
       </section>
+
+      <section class="popular container">
+        <h2 class="popular__title">
+          Вязаные корзинки
+        </h2>
+
+        <strong class="popular__label">
+          Товар недели
+        </strong>
+
+        <div class="popular__description">
+          <p class="popular__description-lead">
+            Экологически чистая пряжа, ручная работа. Доступны в шести расцветках и трёх размерах.
+          </p>
+
+          <dl class="popular__description-list">
+            <div class="popular__descripyion-item">
+              <dt>
+                Цвет:
+              </dt>
+
+              <dd>
+                &quot;Тиффани&quot;/серый
+              </dd>
+            </div>
+
+            <div class="popular__descripyion-item">
+              <dt>
+                Диаметр:
+              </dt>
+
+              <dd>
+                25 см
+              </dd>
+            </div>
+
+            <div class="popular__descripyion-item">
+              <dt>
+                Высота:
+              </dt>
+
+              <dd>
+                15 см
+              </dd>
+            </div>
+          </dl>
+        </div>
+
+        <figure class="popular__image">
+          <picture>
+            <source media="(min-width: 1150px)" srcset="img/webp/popular-desktop.webp 1x, img/webp/popular-desktop@2x.webp 2x">
+            <source media="(min-width: 772px)" srcset="img/webp/popular-tablet.webp 1x, img/webp/popular-tablet@2x.webp 2x">
+            <img src="img/webp/popular-mobile.webp" srcset="img/webp/popular-mobile@2x.webp 2x" width="260" height="315" alt="Изображение вязаных корзинок различных размеров." decoding="async" loading="lazy">
+          </picture>
+        </figure>
+
+        <div class="popular__footer">
+          <dl class="popular__price">
+            <dt>
+              Цена:
+            </dt>
+
+            <dd>
+              990 руб.
+            </dd>
+          </dl>
+
+          <div class="popular__button">
+            @@include("html/elements/button.html", {
+              text: 'Заказать'
+            })
+          </div>
+        </div>
+
+
+      </section>
     </main>
 
     @@include("html/sections/footer.html", {

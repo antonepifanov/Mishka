@@ -1,0 +1,21 @@
+.button {
+  @include btnres;
+  border: 2px solid $black2;
+  min-height: 52px;
+  display: grid;
+  place-items: center;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.1;
+  text-transform: uppercase;
+  color: $black2;
+  text-align: center;
+
+  &--other {
+    border: none;
+    background-color: $green1;
+    color: $color-default-white;
+  }
+}
+
+

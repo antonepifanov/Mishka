@@ -12,4 +12,8 @@
 @import "sections/footer";
 
 //Pages
-@import "pages/index";
+@import "pages/index/hero";
+@import "pages/index/popular";
+
+//Elements
+@import "elements/button";
