@@ -7,6 +7,11 @@
 @import "global/typography";
 @import "global/utils";
 
+// Swiper
+@import "../../node_modules/swiper/swiper-vars";
+@import "../../node_modules/swiper/swiper";
+@import "../../node_modules/swiper/modules/navigation/navigation";
+
 //Sections
 @import "sections/header";
 @import "sections/footer";
@@ -15,6 +20,7 @@
 @import "pages/index/hero";
 @import "pages/index/popular";
 @import "pages/index/about";
+@import "pages/index/reviews";
 
 //Elements
 @import "elements/button";
