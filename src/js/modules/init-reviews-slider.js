@@ -10,8 +10,6 @@ import Swiper, {Navigation} from "swiper";
   sliders.forEach((slider) => {
     new Swiper(slider, {
       modules: [Navigation],
-      slideClass: "swiper-slide",
-      wrapperClass: "swiper-wrapper",
       slidesPerView: 1,
       effect: "slide",
       navigation: {
@@ -25,10 +23,10 @@ import Swiper, {Navigation} from "swiper";
       },
       on: {
         resize: function () {
-          this.update ();
+          this.update();
         },
         orientationchange: function () {
-          this.update ();
+          this.update();
         },
       },
     })

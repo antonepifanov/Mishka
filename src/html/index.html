@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 <html lang="ru">
   <head>
-    @@include("html/sections/head.html")
+    @@include("html/sections/head.html", {
+      isMap: true
+    })
+
     <title>Главная страница магазина Mishka</title>
   </head>
   <body>
@@ -205,6 +208,54 @@
         <div class="reviews__button">
           @@include("html/elements/button.html", {
             text: 'Написать'
+          })
+        </div>
+      </section>
+
+      <section class="contacts container">
+        <h2 class="contacts__title">
+          Контакты
+        </h2>
+
+        <dl class="contacts__list">
+          <div class="contacts__item">
+            <dt>
+              e-mail:
+            </dt>
+
+            <dd>
+              <a href="mailto:info@mimimishkashop.ru">info@mimimishkashop.ru</a>
+            </dd>
+          </div>
+
+          <div class="contacts__item">
+            <dt>
+              адрес:
+            </dt>
+
+            <dd>
+              <address>
+                г. Санкт-Петербург<br>ул. Большая Конюшенная<br>д. 19/8, офис 101
+              </address>
+            </dd>
+          </div>
+        </dl>
+
+        <div class="contacts__map">
+
+          <figure class="contacts__map-picture">
+            <picture>
+              <source media="(min-width: 1150px)" srcset="img/webp/map-desktop.webp 1x, img/webp/map-desktop@2x.webp 2x">
+              <source media="(min-width: 772px)" srcset="img/webp/map-tablet.webp 1x, img/webp/map-tablet@2x.webp 2x">
+              <img src="img/webp/map-mobile.webp" srcset="img/webp/map-mobile@2x.webp 2x" width="320" height="454" alt="Изображение расположения магазина Mishka на карте." decoding="async" loading="lazy">
+            </picture>
+          </figure>
+          <div id="map"></div>
+        </div>
+
+        <div class="contacts__button">
+          @@include("html/elements/button.html", {
+            text: "Напишите нам"
           })
         </div>
       </section>

@@ -11,7 +11,12 @@
   color: $black2;
   transition: $default-transition-settings;
 
-  &:hover,
+  &:hover {
+    border: none;
+    background-color: $black2;
+    color: $color-default-white;
+  }
+
   &:focus-visible {
     border: none;
     background-color: $black2;

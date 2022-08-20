@@ -6,7 +6,7 @@
     padding: 51px 0 58px;
   }
 
-  a {
+  a[href] {
     transition: $default-transition-settings;
 
     &:hover {
