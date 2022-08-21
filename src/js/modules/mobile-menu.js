@@ -28,7 +28,7 @@
       : hideMenu()
   });
 
-  button.addEventListener("click", function() {
+  button.addEventListener("click", () => {
     isMenuOpen
       ? hideMenu()
       : openMenu()

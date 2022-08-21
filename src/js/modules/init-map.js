@@ -1,8 +1,10 @@
 (() => {
+  const map = document.querySelector("#map");
+  const coordinates = map.dataset.coordinates.split(",");
   ymaps.ready(init);
   function init(){
     let myMap = new ymaps.Map("map", {
-        center: [59.93862561, 30.32316074],
+        center: coordinates,
         zoom: 18
     });
 

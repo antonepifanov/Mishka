@@ -113,7 +113,7 @@
             </dd>
           </dl>
 
-          <div class="popular__button">
+          <div class="popular__button" data-order-button data-product-id="#1">
             @@include("html/elements/button.html", {
               text: 'Заказать'
             })
@@ -242,7 +242,6 @@
         </dl>
 
         <div class="contacts__map">
-
           <figure class="contacts__map-picture">
             <picture>
               <source media="(min-width: 1150px)" srcset="img/webp/map-desktop.webp 1x, img/webp/map-desktop@2x.webp 2x">
@@ -250,7 +249,8 @@
               <img src="img/webp/map-mobile.webp" srcset="img/webp/map-mobile@2x.webp 2x" width="320" height="454" alt="Изображение расположения магазина Mishka на карте." decoding="async" loading="lazy">
             </picture>
           </figure>
-          <div id="map"></div>
+
+          <div id="map" data-coordinates="59.93862561,30.32316074"></div>
         </div>
 
         <div class="contacts__button">
@@ -262,7 +262,8 @@
     </main>
 
     @@include("html/sections/footer.html", {
-      main: true
+      main: true,
+      needModal: true
     })
   </body>
 </html>

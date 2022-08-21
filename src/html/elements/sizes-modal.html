@@ -1,0 +1,37 @@
+<dialog class="modal">
+  <h3 class="modal__title">
+    Добавить в&nbsp;корзину
+  </h3>
+
+  <p class="modal__note">
+    Выберите размер:
+  </p>
+
+  <form class="modal__form" action="https://echo.htmlacademy.ru" method="post">
+    <ul class="modal__sizes">
+      <li class="modal__sizes-item">
+        <input class="modal__sizes-input visually-hidden" id="S" type="radio" name="size" value="S" checked>
+        <label class="modal__sizes-label" for="S">S</label>
+      </li>
+
+      <li class="modal__sizes-item">
+        <input class="modal__sizes-input visually-hidden" id="M" type="radio" name="size" value="M">
+        <label class="modal__sizes-label" for="M">M</label>
+      </li>
+
+      <li class="modal__sizes-item">
+        <input class="modal__sizes-input visually-hidden" id="L" type="radio" name="size" value="L">
+        <label class="modal__sizes-label" for="L">L</label>
+      </li>
+    </ul>
+
+    <input class="modal__input-hidden" type="hidden" name="product">
+
+    <div class="modal__button">
+      @@include("html/elements/submit-button.html", {
+        otherButton: true,
+        text:"Добавить"
+      })
+    </div>
+  </form>
+</dialog>
