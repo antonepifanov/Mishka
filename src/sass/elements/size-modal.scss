@@ -1,18 +1,14 @@
 .modal {
+  padding: 0;
   width: 100%;
-  padding: 29px 30px 46px;
-  text-align: center;
+  max-width: 100%;
   border: none;
   border-top: 1px solid $gray4;
   box-shadow: 0 5px 10px 0 $gray5;
-  top: 50vh;
-  transform: translateY(-50%);
-  z-index: 20;
   transition: $default-transition-settings;
 
   @include media(md) {
     max-width: 566px;
-    padding: 38px 92px 46px;
   }
 
   &:not([open]) {
@@ -20,7 +16,16 @@
   }
 
   &::backdrop {
-    color: rgba($color-default-white, 0.9);
+    background-color: rgba($color-default-white, 0.9);
+  }
+}
+
+.modal__wrapper {
+  padding: 29px 30px 46px;
+  text-align: center;
+
+  @include media(md) {
+    padding: 38px 92px 46px;
   }
 }
 
