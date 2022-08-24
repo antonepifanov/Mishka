@@ -1,5 +1,8 @@
 body {
   font-family: $main-font;
+  &::-webkit-scrollbar {
+    display: none;
+  }
 }
 
 h1,

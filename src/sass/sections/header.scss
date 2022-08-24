@@ -63,6 +63,7 @@
 }
 
 .header__logo {
+  align-self: center;
   display: grid;
   place-items: center;
   padding-top: 22px;
@@ -274,12 +275,13 @@
   align-items: center;
   gap: 26px;
   margin-bottom: 0;
-  width: 100%;
+  width: calc(100% - #{$padding--sm});
   height: 100%;
 
   @include media (md) {
     display: grid;
     place-items: center;
+    width: 100%;
   }
 
   &:hover {

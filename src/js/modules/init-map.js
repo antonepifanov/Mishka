@@ -1,5 +1,6 @@
 (() => {
   const map = document.querySelector("#map");
+  if (!map) return;
   const coordinates = map.dataset.coordinates.split(",");
   ymaps.ready(init);
   function init(){
