@@ -12,6 +12,7 @@ export default {
     }
     return true;
   },
+
   email: (value) => {
     if (!value) {
       return 'Пожалуйста, заполните это поле';
