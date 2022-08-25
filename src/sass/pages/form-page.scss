@@ -26,7 +26,7 @@
       content: "";
       left: -$padding--md;
       bottom: -12px;
-      height: 24px;
+      height: 28px;
       width: 100vw;
       background-image: url("../img/zigzag-tablet.svg");
       background-repeat: no-repeat;
@@ -41,7 +41,7 @@
 
     &::after {
       bottom: -17px;
-      height: 34px;
+      height: 40px;
       background-image: url("../img/zigzag.svg");
       left: calc((100vw - #{$lg}) / -2 - #{$padding--md});
     }
@@ -358,7 +358,6 @@
 
 .form-page__form-input {
   @include inputres;
-  cursor: pointer;
   font-size: 17px;
   line-height: 1;
   color: $black2;
@@ -480,7 +479,7 @@
     justify-content: space-between;
   }
 
-  @include media(md) {
+  @include media(lg) {
     padding-left: 128px;
   }
 }
