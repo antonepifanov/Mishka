@@ -367,7 +367,7 @@
   border-bottom: 1px solid $color-default-black;
   transition: $default-transition-settings;
 
-  &:not(.form-page__form-input--invalid):hover {
+  &:not(.form-page__form-input--invalid):not(.form-page__form-input--invalid):hover {
     border-color: $green5;
 
     & + .form-page__form-label{
@@ -378,7 +378,7 @@
     }
   }
 
-  &:not(.form-page__form-input--invalid):focus-visible {
+  &:not(.form-page__form-input--invalid):not(.form-page__form-input--invalid):focus-visible {
     border-color: $green5;
 
     & + .form-page__form-label{

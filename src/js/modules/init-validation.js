@@ -16,6 +16,7 @@ import rules from "../utilites/validation-rules.js";
       if (typeof result == "string") {
         input.setCustomValidity(result);
         input.classList.add("form-page__form-input--invalid");
+        input.focus();
         return;
       }
       input.classList.remove("form-page__form-input--invalid");
