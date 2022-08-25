@@ -1,7 +1,7 @@
 export default {
   text: (value) => {
     if (!value) {
-      return 'Пожалуйста, заполните поле'
+      return 'Пожалуйста, заполните это поле'
     } else {
       const nameRegEx = /[A-Za-zА-Яа-я-]/;
       const result =  nameRegEx.test(value);
