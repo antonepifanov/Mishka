@@ -1,4 +1,3 @@
-import { format } from 'prettier';
 import rules from '../utilites/validation-rules.js';
 
 (() => {
@@ -8,19 +7,18 @@ import rules from '../utilites/validation-rules.js';
   forms.forEach(form => {
     const inputs = form.querySelectorAll('input[required]');
     if (!inputs.length) return;
-
-    inputs.forEach((input) => {
-      const check = rules[input.type];
-      const result = check(input.value);
-
-      input.setCustomValidity("");
-      form.addEventListener('submit', () => {
-        if (typeof result == 'string') {
-          input.setCustomValidity(result);
+    form.addEventListener('submit', () => {
+      inputs.forEach((input) => {
+        input.addEventListener("input", () => {
+          const check = rules[input.type];
+          const result = check(input.value);
+          if (typeof result == 'string') {
+            input.setCustomValidity(result);
+          } else {
+            input.setCustomValidity("");
+          };
           input.reportValidity();
-        } else {
-          input.setCustomValidity("");
-        };
+        })
       })
     })
   })
