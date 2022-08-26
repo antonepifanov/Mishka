@@ -1,9 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru">
   <head>
-    @@include("html/sections/head.html", {
-      isMap: true
-    })
+    @@include("html/sections/head.html")
 
     <title>Главная страница магазина Mishka</title>
   </head>
@@ -263,7 +261,8 @@
 
     @@include("html/sections/footer.html", {
       main: true,
-      needModal: true
+      needModal: true,
+      isMap: true
     })
   </body>
 </html>

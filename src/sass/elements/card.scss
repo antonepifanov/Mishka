@@ -1,0 +1,156 @@
+.card {
+  display: flex;
+  min-height: 374px;
+  border: 1px solid $gray1;
+
+  @include media(md) {
+    min-height: 334px;
+  }
+
+  @include media(lg) {
+    min-height: 659px;
+  }
+}
+
+.card__link {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  width: 100%;
+
+  @include media(md) {
+    display: grid;
+    grid-template-columns: 334px 1fr;
+  }
+
+  @include media(lg) {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &:hover {
+    text-decoration: none;
+
+    .card__info {
+      box-shadow: 0px 6px 10px 0px rgba($color-default-black, 0.1);
+    }
+  }
+
+  &:active {
+    .card__info {
+      box-shadow: 0px 3px 5px 0px rgba($color-default-black, 0.1);
+    }
+  }
+
+  &:focus-visible {
+    outline: none;
+
+    .card__info {
+      box-shadow: 0px 6px 10px 0px rgba($color-default-black, 0.1);
+    }
+  }
+}
+
+.card__image {
+  margin-bottom: 0;
+
+  img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+}
+
+.card__info {
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  transition: $default-transition-settings;
+
+  @include media(md) {
+    padding: 26px 34px;
+  }
+
+  @include media(lg) {
+    padding: 28px;
+  }
+}
+
+.card__title {
+  color: $color-default-black;
+  margin-bottom: 6px;
+}
+
+.card__description {
+  margin-bottom: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  align-items: center;
+  color: $black2;
+}
+
+.card__description-item {
+  font-size: 13px;
+  line-height: 2.3;
+  display: inline-flex;
+  gap: 5px;
+
+  @include media(md) {
+    font-size: 15px;
+    line-height: 2;
+  }
+
+  dt {
+    font-weight: 400;
+  }
+
+  dd {
+    margin-bottom: 0;
+  }
+}
+
+.card__footer {
+  margin-top: auto;
+  padding-top: 23px;
+  border-top: 1px solid $gray1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card__price {
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.6;
+  color: $color-default-black;
+
+  @include media(md) {
+    font-size: 17px;
+    line-height: 1.4;
+  }
+}
+
+.card__button {
+  @include btnres;
+  display: grid;
+  place-items: center;
+  color: rgba($color-default-black, 0.2);
+  transition: $default-transition-settings;
+
+  @include media(md) {
+  }
+
+  &:hover {
+    color: $green1;
+  }
+
+  &:focus-visible {
+    color: $green1;
+  }
+
+  &:active {
+    color: rgba($green1, 0.3);
+  }
+}

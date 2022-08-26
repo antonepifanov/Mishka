@@ -2,15 +2,76 @@
 <html lang="ru">
   <head>
     @@include("html/sections/head.html")
-    <title>Страница формы</title>
+    <title>Страница каталога</title>
   </head>
   <body>
     @@include("html/sections/header.html", {
       catalogPage: true
     })
 
-    @@include("html/sections/footer.html")
+    <main class="catalog container">
+      <h1 class="catalog__title main-title">
+        <span>Каталог товаров</span>
+      </h1>
 
-    <script src="js/bundle.min.js"></script>
+      <section class="catalog__products">
+        <h2 class="visually-hidden">Список товаров магазина Mishka</h2>
+
+        <ul class="catalog__list">
+          @@include("html/elements/card.html", {
+            id: "#2",
+            imageMob: "img/webp/card1-mobile.webp",
+            imageMob2x: "img/webp/card1-mobile@2x.webp",
+            imageTab: "img/webp/card1-tablet.webp",
+            imageTab2x: "img/webp/card1-tablet@2x.webp",
+            imageDesk: "img/webp/card1-desktop.webp",
+            imageDesk2x: "img/webp/card1-desktop@2x.webp",
+            title: "Зайчик-попрыгайчик",
+            size1: "Рост",
+            height: "30 см,",
+            size2: "вес",
+            weight: "200 г",
+            price: "1 200 руб."
+          })
+
+          @@include("html/elements/card.html", {
+            id: "#3",
+            imageMob: "img/webp/card2-mobile.webp",
+            imageMob2x: "img/webp/card2-mobile@2x.webp",
+            imageTab: "img/webp/card2-tablet.webp",
+            imageTab2x: "img/webp/card2-tablet@2x.webp",
+            imageDesk: "img/webp/card2-desktop.webp",
+            imageDesk2x: "img/webp/card2-desktop@2x.webp",
+            title: "Корзинка для белья",
+            size1: "Диаметр",
+            height: "15 см,",
+            size2: "высота",
+            weight: "10 см",
+            price: "690 руб."
+          })
+
+          @@include("html/elements/card.html", {
+            id: "#4",
+            imageMob: "img/webp/card3-mobile.webp",
+            imageMob2x: "img/webp/card3-mobile@2x.webp",
+            imageTab: "img/webp/card3-tablet.webp",
+            imageTab2x: "img/webp/card3-tablet@2x.webp",
+            imageDesk: "img/webp/card3-desktop.webp",
+            imageDesk2x: "img/webp/card3-desktop@2x.webp",
+            title: "Большая корзинка для игрушек",
+            size1: "Диаметр",
+            height: "30 см,",
+            size2: "высота",
+            weight: "30 см",
+            price: "1 500 руб."
+          })
+        </ul>
+      </section>
+    </main>
+
+
+    @@include("html/sections/footer.html", {
+      needModal: true
+    })
   </body>
 </html>

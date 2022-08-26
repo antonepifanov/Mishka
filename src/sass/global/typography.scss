@@ -41,12 +41,12 @@ h2 {
 }
 
 h3 {
-  font-size: 25px;
+  font-size: 17px;
   font-weight: 700;
-  line-height: 1.2;
+  line-height: 1.4;
 
   @include media(md) {
-    font-size: 30px;
-    line-height: 1.9;
+    font-size: 20px;
+    line-height: 1.2;
   }
 }

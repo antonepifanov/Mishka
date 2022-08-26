@@ -1,0 +1,42 @@
+.catalog {
+  padding-bottom: 58px;
+
+  @include media(md) {
+    padding-bottom: 64px;
+  }
+
+  @include media(lg) {
+    padding-bottom: 105px;
+  }
+}
+
+.catalog__title {
+  margin-bottom: 30px;
+
+  @include media(md) {
+    margin-bottom: 79px;
+  }
+
+  @include media(lg) {
+    margin-bottom: 128px;
+  }
+}
+
+.catalog__list {
+  @include listres;
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+
+  @include media(md) {
+    margin-bottom: 53px;
+  }
+
+  @include media(lg) {
+    margin-bottom: 57px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 51px;
+  }
+}
