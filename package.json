@@ -6,7 +6,8 @@
   "scripts": {
     "start": "gulp",
     "lint": "eslint ./src",
-    "lint:fix": "eslint src/js --fix"
+    "lint:fix": "eslint src/js --fix",
+    "mock": "json-server --watch src/js/data/products.json --port 3000"
   },
   "devDependencies": {
     "@babel/core": "^7.17.9",
