@@ -96,7 +96,8 @@ const copy = () => {
     return src(['src/fonts/*.{woff2,woff}',
         'src/favicon.ico',
         'src/manifest.webmanifest',
-        'src/data/**/*.json'
+        'src/data/**/*.json',
+        'src/video/*.{mp4,webm,ogv}'
     ], {
         base: 'src',
         allowEmpty: true

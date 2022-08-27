@@ -19,7 +19,7 @@
 
         <ul class="catalog__list">
           @@include("html/elements/card.html", {
-            id: "#2",
+            id: "2",
             imageMob: "img/webp/card1-mobile.webp",
             imageMob2x: "img/webp/card1-mobile@2x.webp",
             imageTab: "img/webp/card1-tablet.webp",
@@ -35,7 +35,7 @@
           })
 
           @@include("html/elements/card.html", {
-            id: "#3",
+            id: "3",
             imageMob: "img/webp/card2-mobile.webp",
             imageMob2x: "img/webp/card2-mobile@2x.webp",
             imageTab: "img/webp/card2-tablet.webp",
@@ -51,7 +51,7 @@
           })
 
           @@include("html/elements/card.html", {
-            id: "#4",
+            id: "4",
             imageMob: "img/webp/card3-mobile.webp",
             imageMob2x: "img/webp/card3-mobile@2x.webp",
             imageTab: "img/webp/card3-tablet.webp",
@@ -67,8 +67,36 @@
           })
         </ul>
       </section>
-    </main>
 
+      <section class="catalog__production">
+        <h3 class="catalog__production-title">
+          Процесс производства
+        </h3>
+
+        <figure class="catalog__production-video">
+          <video width="260" height="150" poster="img/webp/video-mobile.webp">
+            <source src="video/video.mp4" type="video/mp4">
+          </video>
+
+          <button class="catalog__production-play">
+            <svg width="101" height="77" aria-label="Кнопка включения видео">
+              <use href="img/sprite.svg#play"></use>
+            </svg>
+          </button>
+        </figure>
+
+        <p class="catalog__production-lead">
+          По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.
+        </p>
+
+        <div class="catalog__production-button">
+          @@include("html/elements/button-link.html", {
+            link: "form.html",
+            text: "Сделать заказ"
+          })
+        </div>
+      </section>
+    </main>
 
     @@include("html/sections/footer.html", {
       needModal: true

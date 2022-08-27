@@ -1,4 +1,4 @@
-import rules from "../utilites/validation-rules.js";
+import rules from "../utilities/validation-rules.js";
 
 (() => {
   const forms = document.querySelectorAll("form");
