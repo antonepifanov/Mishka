@@ -1,7 +1,9 @@
 {
   "products": [
     {
-      "id": "1",
+      "id": 1,
+      "title": "Зайчик-попрыгайчик",
+      "price": 1200,
       "pictures": {
         "imageMob": "img/webp/card1-mobile.webp",
         "imageMob2x": "img/webp/card1-mobile@2x.webp",
@@ -10,16 +12,22 @@
         "imageDesk": "img/webp/card1-desktop.webp",
         "imageDesk2x": "img/webp/card1-desktop@2x.webp"
       },
-      "title": "Зайчик-попрыгайчик",
-      "size1": "Рост",
-      "height": "30 см,",
-      "size2": "вес",
-      "weight": "200 г",
-      "price": "1 200 руб."
+      "chars": [
+        {
+          "name": "Рост",
+          "value": "30 см,"
+        },
+        {
+          "name": "вес",
+          "value": "200 г"
+        }
+      ]
     },
 
     {
-      "id": "2",
+      "id": 2,
+      "title": "Корзинка для белья",
+      "price": 690,
       "pictures": {
         "imageMob": "img/webp/card2-mobile.webp",
         "imageMob2x": "img/webp/card2-mobile@2x.webp",
@@ -28,16 +36,22 @@
         "imageDesk": "img/webp/card2-desktop.webp",
         "imageDesk2x": "img/webp/card2-desktop@2x.webp"
       },
-      "title": "Корзинка для белья",
-      "size1": "Диаметр",
-      "height": "15 см,",
-      "size2": "высота",
-      "weight": "10 см",
-      "price": "690 руб."
+      "chars": [
+        {
+          "name": "Диаметр",
+          "value": "15 см,"
+        },
+        {
+          "name": "высота",
+          "value": "10 см"
+        }
+      ]
     },
 
     {
-      "id": "3",
+      "id": 3,
+      "title": "Большая корзинка для игрушек",
+      "price": 1500,
       "pictures": {
         "imageMob": "img/webp/card3-mobile.webp",
         "imageMob2x": "img/webp/card3-mobile@2x.webp",
@@ -46,12 +60,16 @@
         "imageDesk": "img/webp/card3-desktop.webp",
         "imageDesk2x": "img/webp/card3-desktop@2x.webp"
       },
-      "title": "Большая корзинка для игрушек",
-      "size1": "Диаметр",
-      "height": "30 см,",
-      "size2": "высота",
-      "weight": "30 см",
-      "price": "1 500 руб."
+      "chars": [
+        {
+          "name": "Диаметр",
+          "value": "30 см,"
+        },
+        {
+          "name": "высота",
+          "value": "30 см"
+        }
+      ]
     }
   ]
 }

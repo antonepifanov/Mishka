@@ -6,3 +6,4 @@ import './modules/init-phone-mask.js';
 import './modules/init-validation.js';
 import './modules/change-video-poster.js';
 import './modules/init-play-video.js';
+import './modules/get-data.js';

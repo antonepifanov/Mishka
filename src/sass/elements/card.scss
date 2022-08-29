@@ -121,10 +121,15 @@
 }
 
 .card__price {
+  margin: 0;
   font-size: 15px;
   font-weight: 700;
   line-height: 1.6;
   color: $color-default-black;
+
+  dd {
+    margin: 0;
+  }
 
   @include media(md) {
     font-size: 17px;
