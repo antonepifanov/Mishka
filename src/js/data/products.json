@@ -49,6 +49,30 @@
     },
 
     {
+      "id": 2,
+      "title": "Корзинка для белья",
+      "price": 690,
+      "pictures": {
+        "imageMob": "img/webp/card2-mobile.webp",
+        "imageMob2x": "img/webp/card2-mobile@2x.webp",
+        "imageTab": "img/webp/card2-tablet.webp",
+        "imageTab2x": "img/webp/card2-tablet@2x.webp",
+        "imageDesk": "img/webp/card2-desktop.webp",
+        "imageDesk2x": "img/webp/card2-desktop@2x.webp"
+      },
+      "chars": [
+        {
+          "name": "Диаметр",
+          "value": "15 см,"
+        },
+        {
+          "name": "высота",
+          "value": "10 см"
+        }
+      ]
+    },
+
+    {
       "id": 3,
       "title": "Большая корзинка для игрушек",
       "price": 1500,

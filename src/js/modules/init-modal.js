@@ -1,4 +1,4 @@
-(() => {
+const initModal = () => {
   const orderButtons = document.querySelectorAll("[data-order-button]");
   const modal = document.querySelector(".modal");
 
@@ -24,4 +24,6 @@
       inputForId.value = button.dataset.productId;
     })
   });
-})();
+};
+
+export {initModal};
