@@ -24,6 +24,8 @@
 
 .catalog__list {
   @include listres;
+  position: relative;
+  min-height: 80px;
   margin-bottom: 30px;
   display: flex;
   flex-direction: column;
@@ -31,6 +33,7 @@
 
   @include media(md) {
     margin-bottom: 53px;
+    min-height: 140px;
   }
 
   @include media(lg) {
@@ -177,8 +180,8 @@
 
 .catalog__spinner {
   position: absolute;
-  top: 50vh;
-  left: 50vw;
+  top: 50%;
+  left: 50%;
   transform: translate(-50%, -50%);
   color: $green1;
 

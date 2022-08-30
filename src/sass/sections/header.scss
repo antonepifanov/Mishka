@@ -362,7 +362,6 @@
 
     & > span {
       opacity: 0.6;
-      transition: $default-transition-settings;
     }
   }
 
@@ -374,7 +373,6 @@
 
     & > span {
       opacity: 0.6;
-      transition: $default-transition-settings;
     }
   }
 
@@ -386,6 +384,10 @@
     & > span {
       opacity: 0.3;
     }
+  }
+
+  & > span {
+    transition: $default-transition-settings;
   }
 
   svg {
