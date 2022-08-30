@@ -1,4 +1,4 @@
-const initModal = () => {
+export const initModal = () => {
   const orderButtons = document.querySelectorAll("[data-order-button]");
   const modal = document.querySelector(".modal");
 
@@ -25,5 +25,3 @@ const initModal = () => {
     })
   });
 };
-
-export {initModal};

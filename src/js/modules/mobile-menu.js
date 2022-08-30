@@ -8,19 +8,19 @@
     header.classList.remove("header__wrapper--closed");
     header.classList.add("header__wrapper--opened");
     isMenuOpen = !isMenuOpen;
-  }
+  };
 
   const hideMenu = () => {
     header.classList.add("header__wrapper--closed");
     header.classList.remove("header__wrapper--opened");
     isMenuOpen = !isMenuOpen;
-  }
+  };
 
   header.classList.remove("header__wrapper--no-js");
 
   if (window.innerWidth < TABLET_WIDTH) {
     hideMenu();
-  }
+  };
 
   window.addEventListener('resize', () => {
     window.innerWidth >= TABLET_WIDTH

@@ -3,9 +3,7 @@ import Swiper, {Navigation} from "swiper";
 (() => {
   const sliders = document.querySelectorAll(".reviews__slider");
 
-  if (!sliders) {
-    return;
-  }
+  if (!sliders) return;
 
   sliders.forEach((slider) => {
     new Swiper(slider, {

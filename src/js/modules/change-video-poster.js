@@ -2,9 +2,7 @@
   const TABLET_WIDTH = 772;
   const DESKTOP_WIDTH = 1150;
   const video = document.querySelector(".catalog__production-video video");
-  if (!video) {
-    return;
-  }
+  if (!video) return;
 
   const changePoster = () => {
     switch (true) {

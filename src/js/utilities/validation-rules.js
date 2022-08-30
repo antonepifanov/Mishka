@@ -1,14 +1,14 @@
 export default {
   text: (value) => {
     if (!value) {
-      return 'Пожалуйста, заполните это поле'
+      return 'Пожалуйста, заполните это поле';
     } else {
       const nameRegEx = /[A-Za-zА-Яа-я-]/;
       const result =  nameRegEx.test(value);
       if (!result) {
-        return 'Введите корректное имя'
-      }
-    }
+        return 'Введите корректное имя';
+      };
+    };
     return true;
   },
 
@@ -20,20 +20,20 @@ export default {
       const result = mailRegEx.test(value);
       if (!result) {
         return 'Введите корректный адрес электронной почты';
-      }
-    }
+      };
+    };
     return true;
   },
 
   tel: (value) => {
     if (!value) {
-      return 'Пожалуйста, укажите номер телефона'
+      return 'Пожалуйста, укажите номер телефона';
     } else {
       const MIN_LENGTH = 16;
       if (value.length < MIN_LENGTH) {
         return 'Введите корректный номер телефона';
-      }
+      };
     }
     return true;
   }
-}
+};
