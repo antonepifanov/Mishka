@@ -1,7 +1,7 @@
 import {initModal} from './init-modal.js'
 
 (() => {
-  const DATA_URL = "https://mockend.com/antonepifanov/Mishka/products";
+  const DATA_URL = "http://localhost:3000/products";
   const catalog = document.querySelector(".catalog__list");
   const spinner = document.querySelector(".catalog__spinner");
   if (!catalog) return;
