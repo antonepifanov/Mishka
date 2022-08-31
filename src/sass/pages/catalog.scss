@@ -177,27 +177,3 @@
     border-left: none;
   }
 }
-
-.catalog__spinner {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: $green1;
-
-  svg {
-    width: 50px;
-    height: 50px;
-
-    @include media(md) {
-      width: 120px;
-      height: 120px;
-    }
-  }
-
-  &--loading {
-    svg {
-      display: block;
-    }
-  }
-}
